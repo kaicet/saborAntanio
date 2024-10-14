@@ -27,7 +27,8 @@ function Reserva() {
 
   return (
     <div className="reserva-container">
-      <h2>Crear Reserva</h2>
+      <h2>Reserva tu Mesa</h2>
+      <p className="reserva-description">Por favor, completa el siguiente formulario para realizar tu reserva.</p>
       <div className="form-group">
         <label>Nombre</label>
         <input
@@ -35,6 +36,7 @@ function Reserva() {
           placeholder="Ingresa tu nombre"
           onChange={(e) => setNombre(e.target.value)}
           value={nombre}
+          required
         />
       </div>
 
@@ -44,6 +46,7 @@ function Reserva() {
           type="date"
           onChange={(e) => setFecha(e.target.value)}
           value={fecha}
+          required
         />
       </div>
 
@@ -54,6 +57,7 @@ function Reserva() {
           placeholder="Ingresa tu celular"
           onChange={(e) => setCelular(e.target.value)}
           value={celular}
+          required
         />
       </div>
 
@@ -65,6 +69,7 @@ function Reserva() {
           onChange={(e) => setPersonas(e.target.value)}
           value={personas}
           min="1"
+          required
         />
       </div>
 
